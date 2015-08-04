@@ -1,0 +1,83 @@
+---
+title: Phillip Creglow's Blog
+---
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{page.title}}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+
+  <header class="header-image">
+    <div class="avatar">
+      <img src="../img/avatar.png" alt="avatar">
+    </div>
+    <div class="header-content">
+      <h3>Phillip Creglow</h3>
+      <p>Orlando, FL</p>
+      <img src="../img/TIIY-Logo-500px-white.png" class="tiy">
+      <img src="../img/FrontEnd-Icon.png" class="fee">
+    </div>
+  </header>
+
+  <section class="content">
+    <ul id="tabs">
+      <li class="tab-1">
+        <button id="posts" class="button">
+          <a>Posts</a>
+        </button>
+        <article id="blog" class="inactive">
+          {% for post in site.posts %}
+          <span><br>
+            <a href="{{post.url}}">{{post.title}}</a>
+          </span><br>
+          {% endfor %}
+        </article>
+      </li>
+      <li class="tab-2">
+        <button id="contact" class=button>
+          <a>Contact</a>
+        </button>
+        <article id="contact-info" class="inactive">
+          <span>
+            <h3>Phillip Creglow</h3>
+            <img src="../img/github7.png">
+            <a href="https://github.com/pcreglow">@pcreglow</a>
+            <br>
+            <img src="../img/LinkedIn.png">
+            <a href="https://www.linkedin.com/in/phillipcreglow">Phillip Creglow</a>
+            <br>
+            <img src="../img/Twitter.2png.png">
+            <a href="https://twitter.com/wahoopcc">@wahoopcc</a>
+            <br>
+            <img src="../img/Facebook.png">
+            <a href="https://www.facebook.com/pcreglow">Phillip Creglow</a>
+            <br>
+            <img src="../img/Instagram.png">
+            <a href="https://instagram.com/phillip_creglow/">phillip_creglow</a>
+            <br>
+          </span>
+      </li>
+    </ul>
+  </section>
+
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
